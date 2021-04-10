@@ -1,7 +1,8 @@
 {%  extends "layout.html" %}
 
+
 {% block title %}
-index
+Next
 {% endblock %}
 
 {% block headline %}
@@ -10,16 +11,12 @@ index
 
 {% block content %}
 <p>{{ message }}</p>
+<form action="/hello/" method="post">
+    <input type="text" name="send" value="{{ send }}">
+    <input type="submit">
+</form>
 {% endblock %}
 
 {% block footer %}
 copyright 2021 alt70155
 {% endblock %}
-
-
-<div>
-    <form method="post" action="/">
-        <input type="text" name="field">
-        <input type="submit">
-    </form>
-</div>
